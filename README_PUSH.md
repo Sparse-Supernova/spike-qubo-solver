@@ -4,7 +4,7 @@
 
 The GitHub remote is already set up:
 ```
-https://github.com/robbob-tech/spike-qubo-solver.git
+https://github.com/Sparse-Supernova/spike-qubo-solver.git
 ```
 
 ## 📝 Next Step: Create Repository on GitHub
@@ -34,6 +34,6 @@ That's it! Your code will be pushed to GitHub.
 
 Once pushed, your repository will be available at:
 ```
-https://github.com/robbob-tech/spike-qubo-solver
+https://github.com/Sparse-Supernova/spike-qubo-solver
 ```
 
