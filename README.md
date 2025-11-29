@@ -93,23 +93,23 @@ Try the solver without installing anything! The package is deployed as a Cloudfl
 
 **Live endpoint:** `https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/solve`
 
+> ⚠️ **Important:** The endpoint only accepts **POST** requests. Browsers will send GET requests by default, so use `curl`, `fetch`, or a REST client.
+
 ### Example: Solve a QUBO
 
+**Using curl:**
 ```bash
 curl -X POST https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/solve \
   -H "Content-Type: application/json" \
   -d '{
     "problem": {
       "kind": "qubo",
-      "payload": {
-        "n": 3,
-        "terms": [
-          [0, 0, -1],
-          [1, 1, -1],
-          [2, 2, -1],
-          [0, 1, 2]
-        ]
-      }
+      "payload": [
+        [0, 0, -1],
+        [1, 1, -1],
+        [2, 2, -1],
+        [0, 1, 2]
+      ]
     },
     "options": {
       "maxIterations": 1000
@@ -117,8 +117,26 @@ curl -X POST https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/so
   }'
 ```
 
+**Using JavaScript fetch:**
+```javascript
+const response = await fetch('https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/solve', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    problem: {
+      kind: 'qubo',
+      payload: [[0, 0, -1], [1, 1, -1], [2, 2, -1], [0, 1, 2]]
+    },
+    options: { maxIterations: 1000 }
+  })
+});
+const result = await response.json();
+console.log(result);
+```
+
 ### Example: Solve Max-Cut
 
+**Using curl:**
 ```bash
 curl -X POST https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/solve \
   -H "Content-Type: application/json" \
