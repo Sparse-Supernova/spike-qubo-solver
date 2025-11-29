@@ -1,6 +1,6 @@
 # Spike QUBO Solver
 
-[![CI](https://github.com/robbob-tech/spike-qubo-solver/actions/workflows/ci.yml/badge.svg)](https://github.com/robbob-tech/spike-qubo-solver/actions/workflows/ci.yml)
+[![CI](https://github.com/Sparse-Supernova/spike-qubo-solver/actions/workflows/ci.yml/badge.svg)](https://github.com/Sparse-Supernova/spike-qubo-solver/actions/workflows/ci.yml)
 ![USL Repo-Sat Audit](https://img.shields.io/badge/USL%20Repo--Sat-Passed-skyblue?style=flat-square)
 
 > _USL repo-saturation audit passed — no proprietary algorithms or high-dimensional signatures detected._
