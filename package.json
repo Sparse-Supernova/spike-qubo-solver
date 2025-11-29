@@ -1,0 +1,41 @@
+{
+  "name": "@sparse-supernova/spike-qubo-solver",
+  "version": "1.0.1",
+  "description": "A spike-driven QUBO and Max-Cut solver for medium-scale combinatorial optimization in pure JavaScript",
+  "type": "module",
+  "main": "src/index.mjs",
+  "bin": {
+    "spike-qubo-solver": "bin/cli.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "scripts": {
+    "test": "node tests/test.mjs",
+    "smoke:api": "node tests/api-smoke.mjs",
+    "bench": "node tests/benchmark.mjs",
+    "bench:compare": "node tests/benchmark_compare.mjs",
+    "bench:sweetspot": "node tests/benchmark_sweetspot.mjs",
+    "gen:bench-instances": "node scripts/generate_bench_instances.mjs",
+    "example:qubo": "node examples/example_qubo.mjs",
+    "example:maxcut": "node examples/example_maxcut.mjs",
+    "example:medium": "node examples/example_medium.mjs"
+  },
+  "keywords": [
+    "qubo",
+    "max-cut",
+    "optimization",
+    "combinatorial",
+    "spike",
+    "solver"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robbob-tech/spike-qubo-solver.git"
+  }
+}
