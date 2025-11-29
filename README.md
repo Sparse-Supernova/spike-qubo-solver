@@ -59,6 +59,34 @@ Advanced diagnostics (e.g. USL/FRAI, auto-tuning, custom sparse encoders, or neu
 
 ---
 
+## Who is this for?
+
+- **Developers working in JavaScript/TypeScript** who want a lightweight QUBO / Max-Cut solver without pulling in C++ or Python stacks.
+
+- **People building edge or serverless systems** (for example on Cloudflare Workers) who need millisecond-scale combinatorial optimization.
+
+- **Researchers and hackers** who want a simple spike-style heuristic baseline alongside simulated annealing or greedy solvers.
+
+## When to use vs not use
+
+**Use this when:**
+
+- You have small to medium problems (up to low thousands of variables) where "good solutions fast" are more important than provable optimality.
+
+- You want to integrate QUBO / Max-Cut solving directly into Node.js, Cloudflare Workers, or other JS runtimes.
+
+- You need a simple, inspectable implementation for experiments, benchmarking, teaching, or prototyping.
+
+**Do not use this when:**
+
+- You need mathematically proven optimal solutions or tight optimality gaps on very large instances (use exact solvers / commercial MIP/QP solvers instead).
+
+- You need advanced modeling features (constraints beyond QUBO, large-scale MIP, etc.) provided by full optimization frameworks.
+
+- You require hardware-accelerated or quantum hardware backends; this project is a pure software heuristic.
+
+---
+
 ## USL Repo-Sat Audit
 
 This repository has been checked using a *USL repo-saturation audit*, a safety scan designed to ensure that **no proprietary high-dimensional algorithms, internal research kernels, or signature-based optimisation components** are present in the public codebase.
@@ -602,3 +630,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on contributing to this 
 ## License
 
 This project is licensed under the Apache License 2.0 – see the [LICENSE](./LICENSE) file for details.
+
+---
+
+_Keywords: QUBO, Max-Cut, simulated annealing, spike-based annealer, combinatorial optimization, Cloudflare Workers, Node.js._
