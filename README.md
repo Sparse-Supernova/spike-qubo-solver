@@ -5,6 +5,8 @@
 
 > _USL repo-saturation audit passed — no proprietary algorithms or high-dimensional signatures detected._
 
+**Status:** experimental but tested (see [TEST_SUMMARY.md](./TEST_SUMMARY.md)).
+
 A lightweight, spike-based solver for QUBO and Max-Cut problems, designed for **medium-scale combinatorial optimisation** in pure JavaScript.
 
 This package gives you:
@@ -84,6 +86,70 @@ pnpm add @sparse-supernova/spike-qubo-solver
 ```
 
 Node.js >= 20 is recommended.
+
+## API Demo
+
+Try the solver without installing anything! The package is deployed as a Cloudflare Worker with a simple REST API.
+
+**Live endpoint:** `https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/solve`
+
+### Example: Solve a QUBO
+
+```bash
+curl -X POST https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/solve \
+  -H "Content-Type: application/json" \
+  -d '{
+    "problem": {
+      "kind": "qubo",
+      "payload": {
+        "n": 3,
+        "terms": [
+          [0, 0, -1],
+          [1, 1, -1],
+          [2, 2, -1],
+          [0, 1, 2]
+        ]
+      }
+    },
+    "options": {
+      "maxIterations": 1000
+    }
+  }'
+```
+
+### Example: Solve Max-Cut
+
+```bash
+curl -X POST https://spike-qubo-solver-worker.sparsesupernova.workers.dev/api/solve \
+  -H "Content-Type: application/json" \
+  -d '{
+    "problem": {
+      "kind": "maxcut",
+      "payload": {
+        "n": 4,
+        "edges": [
+          [0, 1, 1],
+          [1, 2, 1],
+          [2, 3, 1],
+          [3, 0, 1]
+        ]
+      }
+    },
+    "options": {
+      "maxIterations": 1000
+    }
+  }'
+```
+
+**Response format:**
+```json
+{
+  "bestEnergy": -2.5,
+  "state": [1, 0, 1],
+  "iterations": 1000,
+  "timeMs": 12.5
+}
+```
 
 ## Basic usage
 
