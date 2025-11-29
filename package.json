@@ -1,6 +1,6 @@
 {
   "name": "@sparse-supernova/spike-qubo-solver",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A spike-driven QUBO and Max-Cut solver for medium-scale combinatorial optimization in pure JavaScript",
   "type": "module",
   "main": "src/index.mjs",
@@ -36,6 +36,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/robbob-tech/spike-qubo-solver.git"
+    "url": "https://github.com/Sparse-Supernova/spike-qubo-solver.git"
   }
 }
