@@ -1,6 +1,6 @@
 {
   "name": "@sparse-supernova/spike-qubo-solver",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A spike-driven QUBO and Max-Cut solver for medium-scale combinatorial optimization in pure JavaScript",
   "type": "module",
   "main": "src/index.mjs",
@@ -23,9 +23,16 @@
   },
   "keywords": [
     "qubo",
+    "maxcut",
     "max-cut",
+    "simulated annealing",
+    "annealing",
     "optimization",
-    "combinatorial",
+    "combinatorial optimization",
+    "cloudflare workers",
+    "edge",
+    "javascript",
+    "nodejs",
     "spike",
     "solver"
   ],
