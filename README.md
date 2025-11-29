@@ -1,5 +1,6 @@
 # Spike QUBO Solver
 
+[![npm version](https://img.shields.io/npm/v/@sparse-supernova/spike-qubo-solver.svg)](https://www.npmjs.com/package/@sparse-supernova/spike-qubo-solver)
 [![CI](https://github.com/Sparse-Supernova/spike-qubo-solver/actions/workflows/ci.yml/badge.svg)](https://github.com/Sparse-Supernova/spike-qubo-solver/actions/workflows/ci.yml)
 ![USL Repo-Sat Audit](https://img.shields.io/badge/USL%20Repo--Sat-Passed-skyblue?style=flat-square)
 
@@ -107,11 +108,9 @@ The current version of this package **passed the audit**, indicating that it con
 
 ```bash
 npm install @sparse-supernova/spike-qubo-solver
-
-# or
-
-pnpm add @sparse-supernova/spike-qubo-solver
 ```
+
+**npm:** https://www.npmjs.com/package/@sparse-supernova/spike-qubo-solver
 
 Node.js >= 20 is recommended.
 
